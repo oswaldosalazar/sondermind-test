@@ -1,0 +1,30 @@
+<div class="inputs">
+  <span class="input"> Group size: </span>
+  <form (ngSubmit)="onSubmit()">
+    <input
+      data-test="group-size"
+      class="input item-input"
+      [(ngModel)]="sizeInput"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </form>
+</div>
+<div *ngIf="size">
+  <div class="result">
+    <div *ngFor="let item of result | keyvalue">
+      <div class="result-box" *ngIf="item.value">
+        <div>{{ item.key }} : {{ item.value }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="result-text" *ngIf="showResult">
+    <div *ngIf="groupsCounter == 1; then thenBlock; else elseBlock"></div>
+    <ng-template #thenBlock>
+      There is {{ groupsCounter }} complete group
+    </ng-template>
+    <ng-template #elseBlock
+      >There are {{ groupsCounter }} complete groups
+    </ng-template>
+    of size {{ size }}.
+  </div>
+</div>

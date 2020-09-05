@@ -1,0 +1,25 @@
+.input {
+  display: flex;
+  flex-direction: row;
+}
+
+.label {
+  padding-right: 20px;
+}
+
+.stages {
+  padding-top: 20px;
+  margin: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.stage {
+  width: 150px;
+}
+
+.stage-element {
+  display: flex;
+  flex-direction: column;
+}

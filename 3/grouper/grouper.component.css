@@ -1,0 +1,29 @@
+.input {
+  margin: 5px;
+}
+
+.inputs {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.result-box {
+  border-style: solid;
+  border-width: 1px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.result-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+}

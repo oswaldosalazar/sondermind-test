@@ -1,0 +1,9 @@
+.input {
+  margin: 5px;
+}
+
+.inputs {
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+}

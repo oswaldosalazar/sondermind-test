@@ -1,0 +1,33 @@
+<div class="inputs">
+  <form (ngSubmit)="onSubmit()">
+    <input
+      class="input item-input"
+      [(ngModel)]="item"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </form>
+  <input
+    type="button"
+    value="Add Item"
+    class="input add-item"
+    (onClick)="addItem(item)"
+  />
+  <input
+    type="button"
+    value="Remove Item"
+    class="input remove-item"
+    (onClick)="removeItem(item)"
+  />
+  <input
+    type="button"
+    value="Clear Items"
+    class="input clear-list"
+    (onClick)="clearItems()"
+  />
+</div>
+
+<div>
+  <ul class="items">
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+</div>

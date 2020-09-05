@@ -1,0 +1,27 @@
+<div class="input">
+  <span class="label">Add an item:</span>
+
+  <span>
+    <form [formGroup]="addItemForm" (ngSubmit)="onSubmit()">
+      <input type="text" name="assembly-add-item" formControlName="item" />
+    </form>
+  </span>
+</div>
+
+<div class="stages">
+  <div *ngFor="let stage of stages" data-test="assembly-stage" class="stage">
+    <div>{{ stage }}</div>
+    <div *ngFor="let item of items[stage]" class="stage-element">
+      <button
+        *ngIf="item"
+        data-test="assembly-item"
+        (click)="upStage($event)"
+        (contextmenu)="downStage($event)"
+        name="{{ stage }}"
+        id="{{ item }}"
+      >
+        {{ item }}
+      </button>
+    </div>
+  </div>
+</div>
